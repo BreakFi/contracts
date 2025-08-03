@@ -1,0 +1,53 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "lint:fix": "solhint 'contracts/**/*.sol' --fix",
+    "format": "prettier --write 'contracts/**/*.sol' 'test/**/*.ts' 'scripts/**/*.ts'",
+    "format:check": "prettier --check 'contracts/**/*.sol' 'test/**/*.ts' 'scripts/**/*.ts'",
+    "deploy:localhost": "hardhat deploy --network localhost",
+    "deploy:goerli": "hardhat deploy --network goerli --verify",
+    "deploy:mumbai": "hardhat deploy --network mumbai --verify",
+    "deploy:mainnet": "hardhat deploy --network mainnet --verify",
+    "deploy:polygon": "hardhat deploy --network polygon --verify",
+    "deploy:arbitrum": "hardhat deploy --network arbitrum --verify",
+    "verify": "hardhat verify",
+    "clean": "hardhat clean",
+    "node": "hardhat node",
+    "console": "hardhat console"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BreakFi/contracts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BreakFi/contracts/issues"
+  },
+  "homepage": "https://github.com/BreakFi/contracts#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "@types/node": "^24.1.0",
+    "dotenv": "^17.2.1",
+    "hardhat": "^2.26.1",
+    "hardhat-deploy": "^1.0.4",
+    "hardhat-gas-reporter": "^2.3.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-solidity": "^2.1.0",
+    "solhint": "^6.0.0",
+    "solidity-coverage": "^0.8.16",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

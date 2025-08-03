@@ -1,0 +1,49 @@
+{
+  "testSuites": {
+    "unit": {
+      "description": "Unit tests for individual contracts",
+      "files": [
+        "test/unit/P2PEscrow.test.ts",
+        "test/unit/ReputationRegistry.test.ts", 
+        "test/unit/PlatformDAO.test.ts"
+      ],
+      "timeout": 60000,
+      "parallel": false
+    },
+    "integration": {
+      "description": "Integration tests for cross-contract workflows",
+      "files": [
+        "test/integration/SystemIntegration.test.ts"
+      ],
+      "timeout": 120000,
+      "parallel": false
+    },
+    "full": {
+      "description": "Complete test suite",
+      "files": [
+        "test/unit/*.test.ts",
+        "test/integration/*.test.ts"
+      ],
+      "timeout": 180000,
+      "parallel": false
+    }
+  },
+  "coverage": {
+    "enabled": true,
+    "threshold": {
+      "branches": 80,
+      "functions": 85,
+      "lines": 85,
+      "statements": 85
+    },
+    "exclude": [
+      "test/**/*",
+      "contracts/mocks/**/*"
+    ]
+  },
+  "gas": {
+    "enabled": true,
+    "optimizations": 200,
+    "blockGasLimit": 12000000
+  }
+}
